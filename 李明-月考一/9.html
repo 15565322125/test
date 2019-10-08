@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>你好周一</h1>
+    <button id="btn">替换</button>
+    <script>
+        var h1 = document.getElementsByTagName('h1')[0],
+            btn = document.getElementById('btn')
+        var h3 = document.createElement('h3')
+        h3.innerText = h1.innerText
+        btn.onclick = function(){
+            document.body.replaceChild(h3, h1)
+            btn.onclick = null
+        }
+    </script>
+</body>
+</html>
