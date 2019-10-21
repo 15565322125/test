@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    验证码：
+    <span id="h1">HeLLo</span>
+    <h4 id="h4"></h4>
+    <input type="text" id="txt" placeholder="请输入验证码">
+    <button id="btn">验证</button>
+    <script>
+        txt.oninput = function(){
+            h4.innerText = this.value
+        }
+        btn.onclick = function(){
+            if(h1.innerText.toLowerCase() === txt.value.toLowerCase()){
+                alert('验证成功')
+            }else{
+                alert('验证失败')
+            }
+        }
+    </script>
+</body>
+</html>
